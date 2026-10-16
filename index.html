@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e8a9d0">
+
+    <title>A Little Reminder for You ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background particles -->
+    <div id="particles"></div>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <!-- Floating hearts -->
+    <div id="floating-hearts"></div>
+
+    <!-- PAGE 1: WELCOME -->
+    <section class="page active" id="welcome">
+        <div class="container glass welcome-card">
+            <div class="moon floating">☾</div>
+            <p class="eyebrow">A LITTLE CORNER OF THE UNIVERSE</p>
+            <h1 class="title">Hey, you. <span class="pink">♡</span></h1>
+
+            <p class="description">
+                Aku bikin sesuatu nih buat noya (iseng doang)
+                dibacaa yaa
+            </p>
+
+            <div class="tags">
+                <span>A little game</span>
+                <span>A little gift</span>
+                <span>A little reminder</span>
+            </div>
+
+            <button class="primary-btn" id="startButton">
+                Open this little world <span>→</span>
+            </button>
+
+            <p class="footer-text">made with a little care ♡</p>
+        </div>
+    </section>
+
+    <!-- PAGE 2: MEMORY GAME -->
+    <section class="page" id="game">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">STAGE 01 · TAKE YOUR TIME</p>
+                <h1 class="title">Find the little pairs</h1>
+
+                <p class="description">
+                    Cocokkan semua kartu yang sama untuk membuka
+                    hadiah kecilmu. Pelan-pelan aja, nggak ada
+                    batas waktu kok.
+                </p>
+            </div>
+
+            <div class="game-panel glass">
+                <div class="game-stats">
+                    <div class="stat">
+                        <span>Moves</span>
+                        <strong id="moves">0</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Pairs</span>
+                        <strong id="pairs">0 / 4</strong>
+                    </div>
+
+                    <button class="secondary-btn" id="restartButton">
+                        ↻ Restart
+                    </button>
+                </div>
+
+                <div class="board" id="board"></div>
+
+                <p class="game-note" id="gameNote" aria-live="polite">
+                    Cari dua kartu yang cocok ✨
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3: GIFT -->
+    <section class="page" id="giftPage">
+        <div class="container glass center">
+            <p class="eyebrow">STAGE 02 · YOU DID IT!</p>
+            <h1 class="title">A little something for you</h1>
+
+            <p class="description">
+                Kamu berhasil menemukan semua pasangan!
+                Sekarang ada satu hadiah lagi. Coba buka, ya.
+            </p>
+
+            <button class="gift-button" id="giftButton" aria-label="Buka hadiah">
+                <span id="giftEmoji">🎁</span>
+            </button>
+
+            <p class="gift-hint" id="giftHint">
+                Tekan kotak hadiahnya ♡
+            </p>
+
+            <button class="primary-btn hidden" id="openLetterButton">
+                Buka pesan <span>→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- PAGE 4: LETTER -->
+    <section class="page" id="letterPage">
+        <div class="container letter-container">
+            <div class="character floating">🐭 💌</div>
+
+            <p class="eyebrow">STAGE 03 · A REMINDER FOR YOU</p>
+            <h1 class="title">For the days you need it</h1>
+
+            <!-- GIF penyemangat -->
+            <img
+                class="reminder-gif"
+                src="gif/Rapunzel.gif"
+                alt="GIF kecil penyemangat"
+                loading="lazy"
+            >
+
+            <article class="letter">
+                <h2>Hey, you. ♡</h2>
+
+                <div class="letter-content" id="letterContent"></div>
+
+                <p class="signature">
+                    — someone who wishes you well ♡
+                </p>
+            </article>
+
+            <button class="primary-btn" id="lastButton">
+                One last thing <span>→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- PAGE 5: ENDING -->
+    <section class="page" id="ending">
+        <div class="container glass center">
+            <div class="big-heart">♡</div>
+
+            <p class="eyebrow">BEFORE YOU GO</p>
+
+            <h1 class="title">
+                You're doing better<br>
+                than you think.
+            </h1>
+
+            <p class="description">
+                Noya nggak harus punya jawaban hari ini,
+                istirahat ya kalau capek, 
+		kalau lgi ga baik baik aja cerita ya ke siapa pun jangan dipendam.
+                I will forever be proud of you, because i know you are trying your best everyday.
+            </p>
+
+            <p class="closing-message">
+                Please be kind to yourself, okay? 🌷
+            </p>
+
+            <div class="button-group">
+                <button class="primary-btn" id="againButton">
+                    Start again ↻
+                </button>
+
+                <button class="secondary-btn" id="copyButton">
+                    Copy a reminder ♡
+                </button>
+            </div>
+
+            <p class="footer-text">
+                you matter, even on ordinary days.
+            </p>
+        </div>
+    </section>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
